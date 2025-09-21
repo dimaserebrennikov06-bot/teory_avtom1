@@ -15,11 +15,15 @@ namespace teoryAvtom1
     {
         public DetailType Type { get; set; }
         public DetailColor Color { get; set; }
+        private int positionX {get; set; }
+        private int positionY {get; set; }
 
         public Detail(DetailType type, DetailColor color)
         {
             Type = type;
             Color = color;
+            this.positionX = 10;
+            this.positionY = 100;
         }
 
         // Для удобства вывода в текст
@@ -27,6 +31,15 @@ namespace teoryAvtom1
         {
             return $"{Color} {Type}";
         }
+
+        public void moveX(int move) {//50
+            //int positionX;
+            //Timer.start;
+            
+        }
+
+        //функция которая обрабатывает тик
+        //деталька будет сдвигаться на 5 пикселей
     }
 
     // Класс, описывающий Ящик
@@ -167,4 +180,5 @@ namespace teoryAvtom1
             IsRunning = false;
         }
     }
+
 }
