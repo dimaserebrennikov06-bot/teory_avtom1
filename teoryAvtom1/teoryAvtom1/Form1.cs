@@ -148,11 +148,11 @@ namespace teoryAvtom1
                 gameState.MoveConveyor();
 
                 // Проверяем, если деталь дошла до конца
-                if (gameState.CurrentDetailPosition >= 100 && gameState.CurrentDetail != null)
+                if (gameState.CurrentDetailPosition >= gameState.ConveyorLength && gameState.CurrentDetail != null)
                 {
-                    // ИСПРАВЛЕНО: используем TargetType вместо DetailType
+                    // ИСПРАВЛЕНО: используем TargetType вместо DetailType 
                     var targetBox = gameState.Boxes.FirstOrDefault(b =>
-                        b.TargetType == gameState.CurrentDetail.Type && b.IsActive);
+                        b.TargetType == gameState.CurrentDetail.Type && b.IsActive);//проверяется только тип детали. Надо подключить проверку
 
                     if (targetBox != null && !targetBox.IsFull)
                     {
@@ -302,3 +302,4 @@ namespace teoryAvtom1
     }
 
 }
+
