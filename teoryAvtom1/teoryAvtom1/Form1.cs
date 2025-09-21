@@ -152,7 +152,7 @@ namespace teoryAvtom1
                 {
                     // ИСПРАВЛЕНО: используем TargetType вместо DetailType
                     var targetBox = gameState.Boxes.FirstOrDefault(b =>
-                        b.TargetType == gameState.CurrentDetail.Type && b.IsActive);
+                        b.TargetType == gameState.CurrentDetail.Type && b.IsActive);//ошибка, проверяется только тип
 
                     if (targetBox != null && !targetBox.IsFull)
                     {
@@ -302,3 +302,4 @@ namespace teoryAvtom1
     }
 
 }
+
