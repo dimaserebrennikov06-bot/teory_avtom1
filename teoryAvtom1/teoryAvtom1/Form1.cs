@@ -73,7 +73,7 @@ namespace teoryAvtom1
             currentDetailLabel.Text = "Конвейер пуст";
         }
 
-        private void InitializeAvailableDetails()
+        private void InitializeAvailableDetails() // Те детали, что задали в настройках
         {
             availableDetails = new List<DetailType>();
             if (gameState.AllowedTypes != null)
@@ -82,7 +82,7 @@ namespace teoryAvtom1
             }
         }
 
-        private void UpdateAvailableDetails()
+        private void UpdateAvailableDetails() // Обновление нужного списка деталей
         {
             if (gameState.Boxes == null || gameState.AllowedTypes == null)
                 return;
@@ -300,4 +300,5 @@ namespace teoryAvtom1
         private void labelBox5_Click(object sender, EventArgs e) { }
         private void labelBox4_Click(object sender, EventArgs e) { }
     }
+
 }
