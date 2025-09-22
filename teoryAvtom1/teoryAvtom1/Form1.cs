@@ -92,7 +92,7 @@ namespace teoryAvtom1
             foreach (var detailType in gameState.AllowedTypes)
             {
                 // ИСПРАВЛЕНО: используем TargetType вместо DetailType
-                var box = gameState.Boxes.FirstOrDefault(b => b.TargetType == detailType);
+                var box = gameState.Boxes.FirstOrDefault(b => b.TargetType == detailType);//только тип проверяет ToDo
                 if (box != null && !box.IsFull)
                 {
                     newAvailableDetails.Add(detailType);
@@ -302,3 +302,4 @@ namespace teoryAvtom1
     }
 
 }
+
