@@ -68,6 +68,10 @@ namespace teoryAvtom1
             }
             return false;
         }
+
+        public bool checkDetails(Detail detail) {//проверяем детальку
+            return detail.DetailType == TargetType && detail.DetailColor == TargetColor;
+        }
     }
 
     // Главный класс, который будет управлять всей игровой логикой
@@ -167,4 +171,5 @@ namespace teoryAvtom1
             IsRunning = false;
         }
     }
+
 }
